@@ -1,108 +1,80 @@
-# TurboWarp Packager
+# 🐱 CattyMod Packager
 
-https://packager.turbowarp.org/
+📦 A powerful web-based tool that lets you turn your `.sb3` Scratch project into a **standalone app or webpage**, ready to run anywhere — **no server required**!
 
-Converts Scratch projects into HTML files, zip archives, or executable programs for Windows, macOS, and Linux.
+🔗 Live site: [cattymod.github.io/packager](https://cattymod.github.io/packager)
 
-## Development
+---
 
-Install dependencies:
+## ✨ What It Does
 
-```
-npm ci
-```
+CattyMod Packager takes a Scratch-based `.sb3` file and lets you package it for different platforms, including desktop apps and HTML web players.
 
-Start in development mode:
+---
 
-```
-npm start
-```
+## 🧰 How To Use
 
-Then visit http://localhost:8947. Manually refresh to see changes.
+1. Visit: [cattymod.github.io/packager](https://cattymod.github.io/packager)
+2. Upload your `.sb3` file  
+   — OR paste a Scratch project URL  
+   — OR use a direct `.sb3` file URL  
+3. Adjust customization settings:
+   - Title
+   - Cursor
+   - Player settings
+4. Select your **export format**
+5. Click **"Package"** and download your build!
 
-Packaged projects generated while in development mode should not be distributed. Instead, you should run a production build to significantly reduce file size of both the website and the packager.
+---
 
-```
-npm run build-prod
-```
+## 📤 Export Formats
 
-Output will be located in the `dist` folder.
+### 🟢 Recommended Options
+- **🌐 Plain HTML** – Standalone HTML file, works anywhere
+- **🗜️ ZIP** – Ideal for uploading to websites
+- **💻 Electron Windows (32-bit)**
+- **🍎 WKWebView macOS App**
+- **🐧 Electron Linux (64-bit)**
 
-The general layout of `src` is:
+---
 
- - packager: The code that downloads and packages projects.
- - p4: The Svelte website for the packager. "p4" is the name that the packager uses internally to refer to itself.
- - scaffolding: A minimal Scratch project player. Handles most of the boring details of running Scratch projects like handling mouse inputs.
- - common: Some files used by both scaffolding and the packager.
- - addons: Optional addons such as gamepad support or pointerlock.
- - locales: Translations. en.json contains the original English messages. The other languages are translated by volunteers and imported by an automated script. ([you can help](https://docs.turbowarp.org/translate))
- - build: Various build-time scripts such as webpack plugins and loaders.
+### ⚙️ Other Options
+> *(May have larger file size or be for specific platforms)*
 
-## Tips for forks
+- **🗜️ ZIP (single combined file)** – Not recommended
+- **💻 Electron Windows (64-bit)**
+- **💻 Electron Windows (ARM)**
+- **🍎 Electron macOS App**
+- **🐧 Electron Linux (ARM 32-bit & 64-bit)**  
+- **💻 NW.js Windows (32-bit & 64-bit)**
+- **🍎 NW.js macOS App**
+- **🐧 NW.js Linux (64-bit)**
 
-We strive to make the packager easy to fork, even for mods that aren't based on TurboWarp. Reading this section, at least the first half, should make it much easier to do so.
+---
 
-### Packages
+## ✅ Features
 
-If you want to change the scratch-vm/scratch-render/scratch-audio/scratch-storage/etc. used, this is simple:
+- 🎮 Supports `.sb3` projects only
+- ⚙️ Customize cursor, page title, and more
+- 📂 Export as:
+  - HTML file
+  - ZIP folder
+  - Desktop app (Electron or NW.js)
+- 🧱 Compatible with:
+  - Scratch
+  - TurboWarp
+  - PenguinMod
+  - CattyMod
 
- - `npm install` or `npm link` your package. The package name does not matter.
- - Update src/scaffolding/scratch-libraries.js to import the packages with the name you have. (some of our packages are prefixed with `@turbowarp/` while others are still just `scratch-vm` -- just make sure they match yours)
+---
 
-Then just rebuild. You can even install a vanilla scratch-vm and all core functionality will still work (but optional features such as interpolation, high quality pen, stage size, etc. may not work)
+## 📦 Perfect For
 
-Note that npm is a very buggy piece of software and our dependency tree is very large. Occasionally you might get errors about missing dependencies, which should go away if you run `npm install`.
+- Making desktop apps from your Scratch projects
+- Hosting games on websites
+- Sharing projects offline or on USB
+- Customizing your project’s UI & packaging
 
-### Deployment
+---
 
-The packager is deployed as a simple static website. You can host it anywhere by just copying the `dist` folder after a build.
-
-We use GitHub Actions and GitHub Pages to manage our deployment. If you want to do this too:
-
- - Fork the repository on GitHub and push your changes.
- - Go to your fork's settings on GitHub and enable GitHub Pages with the source set to GitHub Actions.
- - Go to the "Actions" tab and enable GitHub Actions if it isn't already enabled.
- - Push commits to the "master" branch.
- - In a few minutes, your site will automatically be built and deployed to GitHub Pages.
-
-### Branding
-
-We ask that you at least take a moment to rename the website by editting `src/packager/brand.js` with your own app name, links, etc.
-
-### Large files
-
-Large files such as NW.js, Electron, and WKWebView executables are stored on an external server outside of this repository. While we aren't actively removing old files (the server still serves files unused since November 2020), we can't promise they will exist forever. The packager uses a secure checksum to validate these downloads. Forks are free to use our servers, but it's easy to setup your own if you'd prefer (it's just a static file server; see `src/packager/large-assets.js` for more information).
-
-### Service worker
-
-Set the environment variable `ENABLE_SERVICE_WORKER` to `1` to enable service worker for offline support (experimental, not 100% reliable). This is not recommended in development. Our GitHub Actions deploy script uses this by default.
-
-## Standalone builds
-
-The packager supports generating "standalone builds" that are single HTML files containing the entire packager. Large files such as Electron binaries will still be downloaded from a remote server as needed. You can download prebuilt standalone builds from [our GitHub releases](https://github.com/TurboWarp/packager/releases). These can be useful if our website is blocked or you don't have a reliable internet connection. Note that standalone builds do not contain an update checker, so do check on your own occasionally.
-
-To make a production standalone build locally:
-
-```
-npm run build-standalone-prod
-```
-
-The build outputs to `dist/standalone.html`.
-
-## Node.js module and API
-
-See [node-api-docs/README.md](node-api-docs/README.md) for Node.js API documentation.
-
-To build the Node.js module locally:
-
-```
-npm run build-node-prod
-```
-
-## License
-
-<!-- Make sure to also update COPYRIGHT_NOTICE in src/packager/brand.js -->
-
-Copyright (C) 2021-2024 Thomas Weber
-
-This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.
+## 🐾 Part of the CattyMod Ecosystem
