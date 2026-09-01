@@ -30,7 +30,7 @@ If this is set to an empty string, the link is removed.
 */
 
 module.exports = {
-  APP_NAME: 'TurboWarp Packager',
+  APP_NAME: 'CattyMod Packager',
   WEBSITE: 'https://cattymod.app/',
   COPYRIGHT_NOTICE: `Copyright (C) 2021-2024 Thomas Weber
 
