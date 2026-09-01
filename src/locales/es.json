@@ -128,7 +128,7 @@
         "description1": "Convierte proyectos de Scratch a archivos HTML, zip o programas ejecutables para Windows, macOS y Linux.",
         "description2": "Si simplemente quiere una manera fácil de incrustar un proyecto en una página web, podría estar interesado en {embedding}.",
         "description2-embedding": "Embedido",
-        "description3": "Reporte bugs, dé comentarios y sugiera ideas {onScratch} o {onGitHub}.",
+        "description3": "Reporte bugs, dé comentarios y sugiera ideas {onScratch}.",
         "description3-on": "en {brand}",
         "disclaimer": "Esta página web no está afiliada con Scratch, el Equipo de Scratch o la Fundación de Scratch.",
         "documentation": "Recursos adicionales y ayuda",
