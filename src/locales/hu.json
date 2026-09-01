@@ -126,7 +126,7 @@
         "description1": "Scratch projektek átkonvertálása HTML fájllá, zip archívummá, vagy futtatható programokká Windowshoz, macOS-hez és Linuxhoz is.",
         "description2": "Ha csak egy egyszerű módját szeretné megtalálni a projektek weboldalhoz történő beágyazásához, akkor talán érdekelheti a következő: {embedding}.",
         "description2-embedding": "Beágyazás",
-        "description3": "Hibák jelentése, visszajelzés küldése és ötletek javaslása {onScratch}, vagy {onGitHub}.",
+        "description3": "Hibák jelentése, visszajelzés küldése és ötletek javaslása {onScratch}.",
         "description3-on": "a {brand}-en",
         "disclaimer": "Ez az oldal nincs jogi kapcsolatban a Scratch-vel, a Scratch Csapattal, vagy a Scratch Alapítvánnyal.",
         "documentation": "Kiegészítő anyagok és segítség",
