@@ -141,7 +141,7 @@
         "description1": "Konverterer Scratch-prosjekter til HTML-filer, zip-arkiver eller kjørbare programmer for Windows, macOS og Linux.",
         "description2": "Hvis du bare vil ha en enkel måte å integrere et prosjekt i nettsiden din på, kan du være interessert i {embedding}.",
         "description2-embedding": "Innebygging",
-        "description3": "Rapporter feil, gi tilbakemelding og kom med forslag {onScratch} eller {onGitHub}.",
+        "description3": "Rapporter feil, gi tilbakemelding og kom med forslag {onScratch}.",
         "description3-on": "på {brand}",
         "disclaimer": "Dette nettstedet er ikke tilknyttet Scratch, Scratch Team eller Scratch Foundation.",
         "documentation": "Tilleggsressurser og hjelp",
