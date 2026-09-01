@@ -156,7 +156,7 @@
         "description1": "Конвертация проектов Scratch в файлы HTML, zip архивы или приложения для Windows, macOS и Linux.",
         "description2": "Если вы хотите простым способом встроить проект на ваш веб-сайт, вас может заинтересовать {embedding}.",
         "description2-embedding": "Встраивание",
-        "description3": "Сообщайте о багах, предлагайте идеи, оставляйте отзывы {onScratch} или {onGitHub}.",
+        "description3": "Сообщайте о багах, предлагайте идеи, оставляйте отзывы {onScratch}.",
         "description3-on": "на {brand}",
         "disclaimer": "Этот сайт не связан со Scratch, Командой Scratch или Фондом Scratch.",
         "documentation": "Дополнительные ресурсы и помощь",
