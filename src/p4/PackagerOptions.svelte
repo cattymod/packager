@@ -627,7 +627,7 @@
         <input type="checkbox" bind:checked={$options.chunks.gamepad}>
         {$_('options.gamepad')}
       </label>
-      <a href="https://turbowarp.org/addons#gamepad" target="_blank" rel="noopener noreferrer">
+      <a href="https://studio.cattymod.app/addons.html#gamepad" target="_blank" rel="noopener noreferrer">
         {$_('options.gamepadHelp')}
       </a>
     </div>
