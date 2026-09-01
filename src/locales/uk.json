@@ -154,7 +154,7 @@
         "description1": "Конвертуйте Scratch проєкти в HTML файли, zip архіви, або програми для Windows, macOS, і Linux.",
         "description2": "Якщо ви хочете простим способом вбудувати ваш проєкт на сайт, вас може зацікавити {embedding} .",
         "description2-embedding": "Вбудовування",
-        "description3": "Повідомляйте про баги, пропонуйте ідеї, та залишайте відгуки {onScratch} або {onGitHub}.",
+        "description3": "Повідомляйте про баги, пропонуйте ідеї, та залишайте відгуки {onScratch}.",
         "description3-on": "на {brand}",
         "disclaimer": "Цей сайт не зв'язаний зі Scratch, Scratch Team, або Scratch Foundation.",
         "documentation": "Допомога та додаткові ресурси",
