@@ -1,4 +1,4 @@
-# TurboWarp Packager
+# CattyMod Packager
 
 https://packager.turbowarp.org/
 
