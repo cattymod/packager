@@ -122,7 +122,7 @@
         "description1": "Spremeni Scratcheve projekte v datoteke HTML, zip ali izvedljive programe za Windows, macOS in Linux.",
         "description2": "Če potrebujete samo enostaven način vgradnje projekta v svojo spletno stran, lahko preberete dokumentacijo o {embedding}.",
         "description2-embedding": "vgradnji",
-        "description3": "Prijavite napake in predlagajte izboljšave {onScratch} ali {onGitHub}.",
+        "description3": "Prijavite napake in predlagajte izboljšave {onScratch}.",
         "description3-on": "na {brand}",
         "disclaimer": "Ta spletna stran ni povezana s Scratchem, skupino Scratch ali fundacijo Scratch.",
         "documentation": "Dodatno gradivo in pomoč",
