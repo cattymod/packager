@@ -155,7 +155,7 @@
         "description1": "Muuntaa Scratch-projekteja HTML-tiedostoiksi, zip-arkistoiksi tai suoritettaviksi Windows-, macOS- tai Linux-ohjelmiksi.",
         "description2": "Jos haluat vain upottaa projektin helposti verkkosivustollesi, sinun kannattaa käyttää {embedding}. ",
         "description2-embedding": "upottamista",
-        "description3": "Ilmoita bugeista, anna palautetta ja kerro ideoita {onScratch} tai {onGitHub}.",
+        "description3": "Ilmoita bugeista, anna palautetta ja kerro ideoita {onScratch}.",
         "description3-on": "{brand}issa",
         "disclaimer": "Tämä sivusto ei ole kytköksissä Scratchiin, Scratch-tiimiin tai Scratch-säätiöön.",
         "documentation": "Lisämateriaalit ja ohjeet",
