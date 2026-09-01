@@ -14,7 +14,6 @@
   import {
     APP_NAME,
     FEEDBACK_PRIMARY,
-    FEEDBACK_SECONDARY,
     ACCENT_COLOR,
     SOURCE_CODE,
     WEBSITE,
@@ -142,7 +141,9 @@
           {/if}
         </p>
       {/if}
+
       <p>{$_('p4.description1')}</p>
+
       <p>
         <ComplexMessage
           message={$_('p4.description2')}
@@ -154,22 +155,19 @@
           }}
         />
       </p>
+
       <p>
         <ComplexMessage
           message={$_('p4.description3')}
           values={{
-            // These placeholders are named this way for legacy reasons.
             onScratch: {
               text: $_('p4.description3-on').replace('{brand}', FEEDBACK_PRIMARY.name),
               href: FEEDBACK_PRIMARY.link
-            },
-            onGitHub: {
-              text: $_('p4.description3-on').replace('{brand}', FEEDBACK_SECONDARY.name),
-              href: FEEDBACK_SECONDARY.link
             }
           }}
         />
       </p>
+
       <p class="disclaimer">
         {$_('p4.disclaimer')}
       </p>
@@ -222,11 +220,14 @@
         <a href={PRIVACY_POLICY}>{$_('p4.privacy')}</a>
         <span> - </span>
       {/if}
+
       <a href={FEEDBACK_PRIMARY.link}>{$_('p4.feedback')}</a>
+
       {#if SOURCE_CODE}
         <span> - </span>
         <a href={SOURCE_CODE}>{$_('p4.sourceCode')}</a>
       {/if}
+
       {#if DONATE}
         <!-- Donation link needs to be wrapped in another element so we can hide it in the Mac App Store -->
         <span class="donate-link">
@@ -235,12 +236,15 @@
         </span>
       {/if}
     </div>
+
     <div>
       <a href="https://docs.turbowarp.org/packager">{$_('p4.documentation')}</a>
     </div>
+
     <div>
       <SelectTheme />
     </div>
+
     <div>
       <SelectLocale />
     </div>
