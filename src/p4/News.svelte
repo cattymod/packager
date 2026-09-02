@@ -13,13 +13,15 @@
   }
 </style>
 
-<Section accent={color}>
-  <div lang="en">
-    <p>
-      <span class="badge">New!</span>
-    </p>
-    <p>
-      Infinite clones is now actually infinite instead of being limited to 9,999,999,999 (though you may encounter significant practical limitations long before reaching that limit).
-    </p>
-  </div>
-</Section>
+{#if false}
+  <Section accent={color}>
+    <div lang="en">
+      <p>
+        <span class="badge">New!</span>
+      </p>
+      <p>
+        Infinite clones is now actually infinite instead of being limited to 9,999,999,999 (though you may encounter significant practical limitations long before reaching that limit).
+      </p>
+    </div>
+  </Section>
+{/if}
