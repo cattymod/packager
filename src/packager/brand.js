@@ -31,14 +31,14 @@ If this is set to an empty string, the link is removed.
 
 module.exports = {
   APP_NAME: 'CattyMod Packager',
-  WEBSITE: 'https://cattymod.app/',
+  WEBSITE: 'https://cattymod.app/packager/',
   COPYRIGHT_NOTICE: `Copyright (C) 2021-2024 Thomas Weber
 
 The Source Code Form of this program is available under the terms of the
 Mozilla Public License, v. 2.0. You can obtain a copy of the license at
 https://www.mozilla.org/en-US/MPL/2.0/.`,
   ACCENT_COLOR: '#4C97FF',
-  SOURCE_CODE: 'https://github.com/cattymod/packager-new',
+  SOURCE_CODE: 'https://github.com/cattymod/packager',
   FEEDBACK_PRIMARY: {
     name: 'Scratch',
     link: 'https://scratch.mit.edu/projects/1335032585/',
