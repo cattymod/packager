@@ -19,13 +19,8 @@ const indexPath = pathUtil.join(dist, 'index.html');
 console.log(`index.html: ${indexPath}`);
 const indexContent = fs.readFileSync(indexPath, 'utf8');
 
-const jsMatch = indexContent.match(/<script src="(js\/[^"]+)"><\/script>/);
-
-if (!jsMatch) {
-  throw new Error('Could not find local Packager JavaScript in index.html');
-}
-
-const jsPath = pathUtil.join(dist, jsMatch[1]);console.log(`packager.js: ${jsPath}`);
+const jsPath = pathUtil.join(dist, indexContent.match(/<script src="(.*)"><\/script>/)[1]);
+console.log(`packager.js: ${jsPath}`);
 const jsContent = fs.readFileSync(jsPath, 'utf-8');
 
 const faviconPath = pathUtil.join(__dirname, '../../static/favicon.ico');
