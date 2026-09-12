@@ -3,11 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <% const {APP_NAME} = require('../packager/brand.js'); %>
 
     <title><%= APP_NAME %> - Convert Scratch projects to HTML, EXE, and more</title>
 
-    <meta name="description" content="Converts Scratch 3, 2, or 1 projects into HTML files, zip archives, or executable programs for Windows, macOS, and Linux. Faster and more customizable than HTMLifier and forkphorus.">
+    <meta
+      name="description"
+      content="Converts Scratch 3, 2, or 1 projects into HTML files, zip archives, or executable programs for Windows, macOS, and Linux. Faster and more customizable than HTMLifier and forkphorus."
+    >
 
     <style>
       body[p4-splash-theme="dark"]:not([p4-loaded]) {
@@ -24,7 +28,6 @@
   <body>
     <noscript>This page requires JavaScript.</noscript>
 
-    <!-- This element needs to exist in the HTML for some browsers to autocomplete it. -->
     <input
       type="file"
       class="input-for-remembering-project-file"
@@ -36,12 +39,17 @@
     <script>
       (function() {
         // This logic is only for the "splash" screen.
-        // It's used to prevent a momentary white screen while the page is loading in dark mode.
+        // It's used to prevent a momentary white screen while
+        // the page is loading in dark mode.
+
         var theme = 'system';
 
         try {
           var local = localStorage.getItem('P4.theme');
-          if (typeof local === 'string') theme = local;
+
+          if (typeof local === 'string') {
+            theme = local;
+          }
         } catch (e) {
           /* ignore */
         }
@@ -57,6 +65,13 @@
     </script>
 
     <!-- CattyMod navbar -->
-    <script src="https://cattymod.app/assets/navbar.js"></script>
+    <script
+      src="https://cattymod.app/assets/navbar.js"
+    ></script>
+
+    <!-- Packager application -->
+    <script
+      src="js/p4.72d754a9f6e50561ddc7.js"
+    ></script>
   </body>
 </html>
