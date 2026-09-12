@@ -1,3 +1,4 @@
+```yaml
 name: Deploy to GitHub Pages
 
 on:
@@ -12,19 +13,24 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout
       uses: actions/checkout@v6
       with:
         persist-credentials: false
+
     - name: Install Node.js
       uses: actions/setup-node@v6
       with:
         node-version: 24
+
     - name: Install dependencies
       run: npm ci
+
     - name: Test
       run: npm test
+
     - name: Build website
       run: |
         mkdir -p web
@@ -32,10 +38,7 @@ jobs:
         cp -r dist/* web
       env:
         ENABLE_SERVICE_WORKER: "1"
-    - name: Build standalone
-      run: |
-        npm run build-standalone-prod
-        cp dist/standalone.html web
+
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v4
       with:
@@ -45,12 +48,37 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     permissions:
       pages: write
       id-token: write
+
     runs-on: ubuntu-latest
     needs: build
+
     steps:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
+```
+
+### What I removed
+
+This entire section is gone:
+
+```yaml
+- name: Build standalone
+  run: |
+    npm run build-standalone-prod
+    cp dist/standalone.html web
+```
+
+So GitHub Pages will now deploy the normal `dist` website, including:
+
+```html
+<script src="https://cattymod.app/assets/navbar.js"></script>
+```
+
+and the normal Packager JavaScript.
+
+**One important thing:** your other `build.yml` workflow should also have its `Build standalone` and `Upload standalone artifact` steps removed if you haven't already. That prevents the same `generate-standalone.js` error from happening there.
