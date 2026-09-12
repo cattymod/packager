@@ -14,6 +14,22 @@
     >
 
     <style>
+      /* Remove the browser's default spacing around the page */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100%;
+      }
+
+      /* Make sure the CattyMod navbar sits flush against the page */
+      .cattymod-navbar-wrapper {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100%;
+      }
+
       body[p4-splash-theme="dark"]:not([p4-loaded]) {
         background-color: #111;
         color-scheme: dark;
@@ -65,13 +81,9 @@
     </script>
 
     <!-- CattyMod navbar -->
-    <script
-      src="https://cattymod.app/assets/navbar.js"
-    ></script>
+    <script src="https://cattymod.app/assets/navbar.js"></script>
 
     <!-- Packager application -->
-    <script
-      src="js/p4.72d754a9f6e50561ddc7.js"
-    ></script>
+    <script src="js/p4.72d754a9f6e50561ddc7.js"></script>
   </body>
 </html>
