@@ -1,4 +1,3 @@
-```yaml
 name: Deploy to GitHub Pages
 
 on:
@@ -60,25 +59,3 @@ jobs:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
-```
-
-### What I removed
-
-This entire section is gone:
-
-```yaml
-- name: Build standalone
-  run: |
-    npm run build-standalone-prod
-    cp dist/standalone.html web
-```
-
-So GitHub Pages will now deploy the normal `dist` website, including:
-
-```html
-<script src="https://cattymod.app/assets/navbar.js"></script>
-```
-
-and the normal Packager JavaScript.
-
-**One important thing:** your other `build.yml` workflow should also have its `Build standalone` and `Upload standalone artifact` steps removed if you haven't already. That prevents the same `generate-standalone.js` error from happening there.
