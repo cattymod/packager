@@ -67,7 +67,7 @@
     color: #56b2ff;
   }
   :global(a:active) {
-    color: red;
+    color: #4c97ff;
   }
   :global(input[type="text"]),
   :global(input[type="number"]),
