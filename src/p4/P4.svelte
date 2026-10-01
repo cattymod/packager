@@ -238,7 +238,7 @@
     </div>
 
     <div>
-      <a href="https://docs.turbowarp.org/packager">{$_('p4.documentation')}</a>
+      <a href="https://cattymod.app/docs/packager">{$_('p4.documentation')}</a>
     </div>
 
     <div>
