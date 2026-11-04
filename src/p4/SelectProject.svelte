@@ -21,6 +21,14 @@
   const projectId = writablePersistentStore('SelectProject.id', defaultProjectId);
   const projectUrl = writablePersistentStore('SelectProject.url', '');
 
+  // Supported file extensions, with CMP as the primary extension.
+  const supportedExtensions = ['.cmp', '.pmp', '.zip', '.snail', '.sb', '.sb2', '.sb3'];
+
+  const isSupportedFile = (file) => {
+    const name = file.name.toLowerCase();
+    return supportedExtensions.some(extension => name.endsWith(extension));
+  };
+
   const projectIdInURL = /^#\d+$/.test(location.hash) ? location.hash.substring(1) : null;
   if (projectIdInURL) {
     $type = 'id';
@@ -113,8 +121,7 @@
     }
   };
   const handleDrop = ({detail: dataTransfer}) => {
-    const name = dataTransfer.files[0].name;
-    if (name.endsWith('.sb') || name.endsWith('.sb2') || name.endsWith('.sb3')) {
+    if (dataTransfer.files.length && isSupportedFile(dataTransfer.files[0])) {
       $type = 'file';
       setFiles(dataTransfer.files);
     }
@@ -246,7 +253,7 @@
           <input type="radio" name="project-type" bind:group={$type} value="file">
           {$_('select.file')}
         </label>
-        <input hidden={$type !== "file"} on:change={handleFileInputChange} bind:this={fileInputElement} type="file" accept=".sb,.sb2,.sb3">
+        <input hidden={$type !== "file"} on:change={handleFileInputChange} bind:this={fileInputElement} type="file" accept=".cmp,.pmp,.zip,.snail,.sb,.sb2,.sb3">
       </div>
       <div class="option">
         <label>
