@@ -14,6 +14,7 @@
   import {
     APP_NAME,
     FEEDBACK_PRIMARY,
+    FEEDBACK_SECONDARY,
     ACCENT_COLOR,
     SOURCE_CODE,
     WEBSITE,
@@ -163,6 +164,10 @@
             onScratch: {
               text: $_('p4.description3-on').replace('{brand}', FEEDBACK_PRIMARY.name),
               href: FEEDBACK_PRIMARY.link
+            },
+            onGitHub: {
+              text: $_('p4.description3-on').replace('{brand}', FEEDBACK_SECONDARY.name),
+              href: FEEDBACK_SECONDARY.link
             }
           }}
         />
