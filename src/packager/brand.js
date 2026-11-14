@@ -43,6 +43,10 @@ https://www.mozilla.org/en-US/MPL/2.0/.`,
     name: 'Scratch',
     link: 'https://scratch.mit.edu/projects/1335032585/',
   },
+  FEEDBACK_SECONDARY: {
+    name: 'Padlet',
+    link: 'https://padlet.com/noahscratch493/cattymod/'
+  },
   DONATE: '',
   PRIVACY_POLICY: 'https://studio.cattymod.app/privacy.html',
 };
