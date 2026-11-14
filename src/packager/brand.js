@@ -33,6 +33,7 @@ module.exports = {
   APP_NAME: 'CattyMod Packager',
   WEBSITE: 'https://cattymod.app/packager/',
   COPYRIGHT_NOTICE: `Copyright (C) 2021-2024 Thomas Weber
+Copyright (C) 2026 Noahscratch493
 
 The Source Code Form of this program is available under the terms of the
 Mozilla Public License, v. 2.0. You can obtain a copy of the license at
